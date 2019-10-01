@@ -13,8 +13,25 @@ namespace Sheet4.Models
         TheBillieEilish,
         TheBTS
     };
+
+    enum Size
+    {
+        onehitwonder,
+        blist,
+        alist,
+        superstar
+    }
+
+    enum Combo
+    {
+        None,
+        ChipsNDrink,
+        CookiesNDrink
+    }
     public class HomeModel
     {
         private Type type { set; get; }
+        private Size size { set; get; }
+        private Combo combo { set; get; }
     }
 }
