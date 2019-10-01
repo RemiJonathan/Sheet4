@@ -1,0 +1,14 @@
+﻿@using Sheet4.Models
+@model Sheet4.Models.HomeModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.BeginForm()
+@Html.ListBoxFor(model => model.Type, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Type))))
+@Html.ListBoxFor(model => model.Size, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Size))))
+@Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.None)None
+@Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.ChipsNDrink)ChipsNDrink
+@Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.CookiesNDrink)CookiesNDrink
