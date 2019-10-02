@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 
-<form target="~/Home/Receipt" method="post">
+<form action="~/Home/Receipt" method="post">
 <!--@Html.BeginForm("Home","Index",FormMethod.Post)-->
 @Html.ListBoxFor(model => model.Type, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Type))))
 @Html.ListBoxFor(model => model.Size, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Size))))
