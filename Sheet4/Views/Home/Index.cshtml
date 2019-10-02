@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 
-<form target="~/Home/Index" method="post">
+<form target="~/Home/Receipt" method="post">
 <!--@Html.BeginForm("Home","Index",FormMethod.Post)-->
 @Html.ListBoxFor(model => model.Type, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Type))))
 @Html.ListBoxFor(model => model.Size, new SelectList(Enum.GetValues(typeof(Sheet4.Models.Size))))
@@ -14,5 +14,5 @@
 @Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.None, new { Checked = "checked" })None
 @Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.ChipsNDrink)ChipsNDrink
 @Html.RadioButtonFor(model => model.Combo, Sheet4.Models.Combo.CookiesNDrink)CookiesNDrink
-    <input type="submit" />
+    <br /><input type="submit" />
 </form>
